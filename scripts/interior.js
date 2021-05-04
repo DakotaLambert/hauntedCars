@@ -1,7 +1,17 @@
-import { getStyles } from "./database.js"
+import { getInteriorStyles, setInteriorStyles } from "./database.js"
 
-const styles = getStyles()
+const styles = getInteriorStyles()
 
+document.addEventListener(
+  "change",
+  (change) => {
+    const changeEvent = change.target
+    if (changeEvent.name === "interior") {
+      // window.alert(`You selected ${changeEvent.value}`)
+      
+    }
+  }
+  )
 
 export const interiors = () => {
     let html = "<ul>";

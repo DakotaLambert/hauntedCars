@@ -42,7 +42,7 @@ export const hauntedCarsHTML = () => {
 </article>
 
 <article>
-    <button>Create Order</button>
+    <button> Submit </button>
     </article>
 
     <article>

@@ -90,12 +90,14 @@ const database = {
   customerOrder : [
     {
       id: 1,
-      colorId: 2,
+      interiorStyleId: 2,
+      paintColorId: 2,
       techId: 2,
       wheelId: 3,
       timestamp: 1614659931693
     },
-  ]
+  ],
+  orderBuilder: {},
 };
 
 export const getTech = () => {
@@ -104,7 +106,7 @@ export const getTech = () => {
 export const getWheels = () => {
   return [...database.wheels];
 };
-export const getStyles = () => {
+export const getInteriorStyles = () => {
   return [...database.interiorStyle]
 }
 export const getPaintColor = () => {
@@ -112,4 +114,18 @@ export const getPaintColor = () => {
 }
 export const getCustomerOrders = () => {
   return [...database.customerOrder]  
+}
+
+
+export const setTech = (id) => {
+  database.orderBuilder.techId = id
+}
+export const setWheel = (id) => {
+  database.orderBuilder.wheelId = id
+}
+export const setInteriorStyles = (id) => {
+  database.orderBuilder.interiorStyleId = id
+}
+export const setPaintColor = (id) => {
+  database.orderBuilder.paintColorId = id
 }

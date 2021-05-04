@@ -1,7 +1,17 @@
-import { getTech } from "./database.js"
+import { getTech, setTech } from "./database.js"
 
 const packages = getTech()
 
+document.addEventListener(
+  "change",
+  (change) => {
+    const changeEvent = change.target
+    if (changeEvent.name === "tech") {
+      // window.alert(`You selected ${changeEvent.value}`)
+      
+    }
+  }
+  )
 
 export const techPacks = () => {
     let html = "<ul>";

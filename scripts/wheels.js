@@ -1,6 +1,18 @@
-import { getWheels } from "./database.js" 
+import { getWheels, setWheel } from "./database.js" 
 
 const wheels = getWheels()
+
+document.addEventListener(
+  "change",
+  (change) => {
+    const changeEvent = change.target
+    if (changeEvent.name === "wheel") {
+      // window.alert(`You selected ${changeEvent.value}`)
+      
+    }
+  }
+  )
+
 
 export const Wheels = () => {
     let html = "<ul>";
