@@ -88,14 +88,14 @@ const database = {
     },
   ],
   customerOrder: [
-    {
-      id: 1,
-      interiorStyleId: 2,
-      paintColorId: 2,
-      techId: 2,
-      wheelId: 3,
-      timestamp: 1614659931693,
-    },
+    // {
+    //   id: 1,
+    //   interiorStyleId: 2,
+    //   paintColorId: 2,
+    //   techId: 2,
+    //   wheelId: 3,
+    //   timestamp: 1614659931693,
+    // },
   ],
   orderBuilder: {},
 };

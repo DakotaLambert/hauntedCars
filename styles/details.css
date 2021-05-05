@@ -29,3 +29,7 @@
     font-family: 'New Rocker';
     box-shadow: 0.25rem 0.25rem 0.5rem black
 }
+.headHeader {
+    text-align: center;
+    font-size: 60px;
+}

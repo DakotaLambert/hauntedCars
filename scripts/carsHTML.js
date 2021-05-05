@@ -12,7 +12,7 @@ import { SubmitOrderButton } from "./submitOrderButton.js";
 export const hauntedCarsHTML = () => {
   return ` 
   
-  <h1>Haunted Light-Cars</h2>
+  <h1 class="headHeader">Haunted Lit-Cars</h2>
 
 
 <article class="options">
