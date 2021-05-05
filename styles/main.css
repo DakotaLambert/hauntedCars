@@ -1,8 +1,18 @@
-ul {
-    list-style-type: none 
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+
+body {
+    font-family: 'New Rocker', cursive;
 }
 
-/* .options {
-    display: flex;
-    justify-content: space-around;
-} */
+ul {
+    list-style-type: none;
+    padding-inline-start: 10px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+div {
+    margin-bottom: 7px;
+}

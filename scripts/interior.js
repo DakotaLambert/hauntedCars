@@ -7,6 +7,7 @@ document.addEventListener(
   (change) => {
     const changeEvent = change.target
     if (changeEvent.name === "interior") {
+      setInteriorStyles(parseInt(changeEvent.value))
       // window.alert(`You selected ${changeEvent.value}`)
       
     }

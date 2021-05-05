@@ -7,47 +7,47 @@ import { colors } from "./paint.js"
 import { techPacks } from "./tech.js";
 import { Wheels } from "./wheels.js";
 import { Orders } from "./orders.js";
-
+import { SubmitOrderButton } from "./submitOrderButton.js";
 
 export const hauntedCarsHTML = () => {
   return ` 
   
-  <h1>Haunted Lit-Cars</h2>
+  <h1>Haunted Light-Cars</h2>
 
 
 <article class="options">
-    <section>
-    <h2>Paint Color</h2>
+    <section id="choiceBoxes">
+    <h2 id="choiceHeaders">Paint Color</h2>
         ${ colors() }
     </section>
     
     
-    <section>
-    <h2>Interior Style</h2>
+    <section id="choiceBoxes">
+    <h2 id="choiceHeaders">Interior Style</h2>
         ${ interiors() }
     </section>
     
     
-    <section>
-    <h2>Tech Package</h2>
+    <section id="choiceBoxes">
+    <h2 id="choiceHeaders">Tech Package</h2>
         ${ techPacks() }
     </section>
     
     
-    <section>
-    <h2>Wheels</h2>
+    <section id="choiceBoxes">
+    <h2 id="choiceHeaders">Wheels</h2>
     ${ Wheels() }
     </section>
   
 </article>
 
-<article>
-    <button> Submit </button>
-    </article>
 
-    <article>
+    ${ SubmitOrderButton() }
+    
+
+    <article class="orderButton">
     <h2> Orders </h2>
-    ${Orders()}
+    ${ Orders ()}
 </article>
 `;
 };

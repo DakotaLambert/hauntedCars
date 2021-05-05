@@ -7,8 +7,7 @@ document.addEventListener(
   (change) => {
     const changeEvent = change.target
     if (changeEvent.name === "tech") {
-      // window.alert(`You selected ${changeEvent.value}`)
-      
+    setTech(parseInt(changeEvent.value))      
     }
   }
   )
