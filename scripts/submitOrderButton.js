@@ -7,7 +7,7 @@ document.addEventListener(
         const customerOrderSuccess = addCustomerOrder()
 
         if(!customerOrderSuccess){
-            window.alert("Incomplete order! Please select all options!")
+            window.alert("Get that boopity back to the options and select ALL!")
         }
     }
 }
