@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+}
+
+#choiceBoxes {
+    flex-basis: 20%;
+    border: 3px double black;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem black;
+}
+
+.orderButton {
+    margin-top: 5rem;
+    margin-left: 14px
+}
+
+#submitOrderButton {
+    margin: 14px;
+    padding: 0.5rem;
+    background-color:black;
+    color: white;
+    font-size: 1rem;
+    font-family: 'New Rocker';
+    box-shadow: 0.25rem 0.25rem 0.5rem black
+}

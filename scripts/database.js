@@ -87,14 +87,14 @@ const database = {
       price: 135.0,
     },
   ],
-  customerOrder : [
+  customerOrder: [
     {
       id: 1,
       interiorStyleId: 2,
       paintColorId: 2,
       techId: 2,
       wheelId: 3,
-      timestamp: 1614659931693
+      timestamp: 1614659931693,
     },
   ],
   orderBuilder: {},
@@ -107,25 +107,66 @@ export const getWheels = () => {
   return [...database.wheels];
 };
 export const getInteriorStyles = () => {
-  return [...database.interiorStyle]
-}
+  return [...database.interiorStyle];
+};
 export const getPaintColor = () => {
-  return [...database.paintColor]
-}
+  return [...database.paintColor];
+};
 export const getCustomerOrders = () => {
-  return [...database.customerOrder]  
-}
-
+  return [...database.customerOrder];
+};
 
 export const setTech = (id) => {
-  database.orderBuilder.techId = id
-}
+  database.orderBuilder.techId = id;
+};
 export const setWheel = (id) => {
-  database.orderBuilder.wheelId = id
-}
+  database.orderBuilder.wheelId = id;
+};
 export const setInteriorStyles = (id) => {
-  database.orderBuilder.interiorStyleId = id
-}
+  database.orderBuilder.interiorStyleId = id;
+};
 export const setPaintColor = (id) => {
-  database.orderBuilder.paintColorId = id
-}
+  database.orderBuilder.paintColorId = id;
+};
+
+export const addCustomerOrder = () => {
+  if (
+    //in operator returns true if these things are IN FACT in the database.orderBuilder, so if nothing is clicked, will return false
+    "interiorStyleId" in database.orderBuilder &&
+    "paintColorId" in database.orderBuilder &&
+    "techId" in database.orderBuilder &&
+    "wheelId" in database.orderBuilder
+  ) {
+    //This is a ternary condition statement, if not using this, use an elseif statement
+
+    //creates a copy of the empty orderBuild object, and stores the object in a new variable called newOrder
+    const newOrder = { ...database.orderBuilder };
+
+    //checking if there is an object with and id greater than 0
+    newOrder.id =
+      database.customerOrder.length > 0
+        ? // -YES?
+          // --- Get the id of the last order from the customerOrder array
+          // --- Set the newOrder.id equal to that value + 1
+          //any objects?
+          [...database.customerOrder].pop().id + 1
+        : //-NO?
+          // --- Set newOrder.id equal to 1
+          1;
+
+    //assigning the value of the newOrder.timestamp to the current timestamp
+    newOrder.timestamp = Date.now();
+
+    //push the newOrder object to our empty object of orderBuilder
+
+    database.customerOrder.push(newOrder);
+
+    //resetting the temporary state of of the orderBuilder object
+    database.orderBuilder = {};
+
+    document.dispatchEvent(new CustomEvent("stateHasChanged"));
+
+    return true;
+  }
+  return false;
+};
