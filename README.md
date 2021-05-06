@@ -1,1 +1,2 @@
 # hauntedLitCars
+## How to test:
