@@ -1,2 +1,2 @@
-# hauntedLitCars
+# hauntedCars
 ## How to test:
