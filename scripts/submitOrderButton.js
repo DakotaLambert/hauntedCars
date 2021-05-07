@@ -7,7 +7,7 @@ document.addEventListener(
         const customerOrderSuccess = addCustomerOrder()
 
         if(!customerOrderSuccess){
-            window.alert("Get that boopity back to the options and select ALL!")
+            window.alert("Please select all options!")
         }
     }
 }
@@ -20,3 +20,4 @@ document.addEventListener(
     <button id="submitOrderButton">Submit Order</button>
     `
 }
+

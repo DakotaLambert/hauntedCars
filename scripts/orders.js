@@ -57,19 +57,3 @@ export const Orders = () => {
   return html;
 };
 
-// return `
-//         <li> Order #${order.id} was ordered on ${order.timestamp}
-//         </li>
-//         `;
-
-// const orderList = orders.map((order) => {
-//   const orders = getCustomerOrders()
-
-//   let html = "<ul>";
-
-//   });
-
-//   html += orderList.join("")
-//   html += "</ul>";
-
-//   return html;
